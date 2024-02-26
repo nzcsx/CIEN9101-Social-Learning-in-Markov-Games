@@ -63,7 +63,7 @@ class DrivingGame:
             
             print('\n')
 
-            # increment ime
+            # increment time
             time_step += 1
 
     # get ai repsonse without changing anything variables yet
