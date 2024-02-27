@@ -24,10 +24,11 @@ class Car:
 
 
 class DrivingGame:
-    def __init__(self, _system_prompt_str):
+    def __init__(self, _system_prompt_str: str, _user_prompt_str: str):
         self.green_car = Car(1, 3, "green")  # Green car moves along X
         self.red_car = Car(3, 1, "red")    # Red car moves along Y
         self._system_prompt_str = _system_prompt_str
+        self._user_prompt_str = _user_prompt_str
 
     def play(self):
         time_step = 1
@@ -85,10 +86,15 @@ class DrivingGame:
         prompt.append(system_prompt)
 
         # message prompt
-        _user_prompt_str = f"You are the {my_car.color} car, you are currently at ({my_car.X},{my_car.Y}). The {other_car.color} car is currently at ({other_car.X},{other_car.Y}). Currently your reward is {my_car.reward}. What is your choice of move? What is your position after the move? Reply in the format of only (Move,PosX,PosY)"
         user_prompt = {
             'role' : 'user', 
-            'content' : _user_prompt_str
+            'content' : self._user_prompt_str.replace('{myColor}', my_car.color)
+                                             .replace('{myX}', str(my_car.X))
+                                             .replace('{myY}', str(my_car.Y))
+                                             .replace('{otherColor}', other_car.color)
+                                             .replace('{otherX}', str(other_car.X))
+                                             .replace('{otherY}', str(other_car.Y))
+                                             .replace('{myReward}',str( my_car.reward))
         }
         prompt.append(user_prompt)
         
@@ -120,6 +126,7 @@ if __name__ == "__main__":
     # load config
     with open('.config') as f:    config = json.load(f)
     _system_prompt_str = config['system']
+    _user_prompt_str = config['user']
     
-    game = DrivingGame(_system_prompt_str)
+    game = DrivingGame(_system_prompt_str, _user_prompt_str)
     game.play()
