@@ -89,9 +89,9 @@ class DrivingGame:
         user_prompt = {
             'role' : 'user', 
             'content' : self._user_prompt_str.replace('{myColor}', my_car.color)
-                                             .replace('{myPosition}', f"({my_car.X}),{my_car.Y})")
+                                             .replace('{myPosition}', f"({my_car.X},{my_car.Y})")
                                              .replace('{otherColor}', other_car.color)
-                                             .replace('{otherPosition}', f"({other_car.X}),{other_car.Y})")
+                                             .replace('{otherPosition}', f"({other_car.X},{other_car.Y})")
                                              .replace('{myReward}',str(my_car.reward))
         }
         prompt.append(user_prompt)
