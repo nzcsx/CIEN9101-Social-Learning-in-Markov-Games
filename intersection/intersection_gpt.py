@@ -121,7 +121,7 @@ class DrivingGame:
         prompt.append(user_prompt)
         
         # Get AI response
-        response = openai.ChatCompletion.create(
+        response = openai.chat.completions.create(
             model='gpt-4',
             messages=prompt,
             temperature=0,
@@ -130,7 +130,7 @@ class DrivingGame:
             frequency_penalty=0.0,
             presence_penalty=0.0
         )
-        rspns_text = response['choices'][0]['message']['content']
+        rspns_text = response.choices[0].message.content
 
         # analyze response
         rspns_list = rspns_text.strip('()').split(',')
