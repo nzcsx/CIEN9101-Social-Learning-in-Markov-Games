@@ -16,7 +16,7 @@
 
     c. `user` prompt shows the current observation of agent $i$, and asks what action to choose. 
     - Given: observation $o_i$. 
-    - Asks for: action $a_i$
+    - Asking: action $a_i$
 4. Creat an `.env` file with your OpenAI secret key in the format below. 
     ```
     OPENAI_KEY = ##########
