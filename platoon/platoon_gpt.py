@@ -86,10 +86,11 @@ class DrivingGame:
                 if my_car.playing:
                     if self.check_crash():
                         my_car.set_reward_from_crash()
-                    elif self.check_platoon():
-                        my_car.set_reward_from_platoon()
                     else:
                         my_car.set_reward_from_move()
+
+                    if self.check_platoon():
+                        my_car.set_reward_from_platoon()
             
             print('\n')
 
@@ -106,8 +107,8 @@ class DrivingGame:
         return self.green_car.playing == True and \
                self.red_car.playing   == True and \
                self.green_car.X == self.red_car.X and \
-               (self.green_car.Y == self.red_car.Y + 3 or \
-                self.green_car.Y == self.red_car.Y - 3)
+               (self.green_car.Y <= self.red_car.Y + 3 or \
+                self.green_car.Y <= self.red_car.Y - 3)
 
     # get ai repsonse without changing anything variables yet
     def get_openai_response(self, my_car: Car) -> tuple[str, int, int]:
