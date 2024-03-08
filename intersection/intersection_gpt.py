@@ -2,6 +2,7 @@ import os
 import json
 import openai
 from dotenv import load_dotenv
+from collections import defaultdict
 
 
 
@@ -34,49 +35,56 @@ class Car:
 
 class DrivingGame:
     def __init__(self, _system_prompt_str: str, _user_prompt_str: str):
-        self.green_car = Car(1, 3, "green")  # Green car moves along X
-        self.red_car = Car(3, 1, "red")    # Red car moves along Y
+        self.car_list = [Car(1, 5, "green"), Car(5, 1, "red"), Car(5, 2, "white")]
         self._system_prompt_str = _system_prompt_str
         self._user_prompt_str = _user_prompt_str
+        self.position_count = defaultdict(int)
 
     def play(self):
         time_step = 1
         while True:
             # status at the beginning of the time step
             print(f"Time Step {time_step}:")
-            for my_car in [self.green_car, self.red_car]:
+            for my_car in self.car_list:
                 if my_car.playing:
                     print(f"{my_car.color} car: ({my_car.X}, {my_car.Y}), {my_car.reward}")
                     # exit game if needed
-                    my_car.playing = (my_car.X != 5) if my_car.color=="green" else (my_car.Y != 5)
+                    my_car.playing = (my_car.X != 9) if my_car.color=="green" else (my_car.Y != 9)
             print('\n')
 
             # check game end
-            if self.check_crash():
+            if self.check_any_car_crash():
                 print('Car crash. Game over.')
                 break
-            if not self.green_car.playing and not self.red_car.playing:
+            if self.check_all_car_not_playing():
                 print(f"Both cars reached the end of the road. Game over.")
                 break
-            if time_step > 10:
+            if time_step > 15:
                 break
 
             # Get move & reward
-            for my_car in [self.green_car, self.red_car]:
+            for my_car in self.car_list:
                 if my_car.playing:
-                    Move, X_pos, Y_pos = self.get_openai_response(my_car)
+                    if my_car.color != "white":
+                        Move, X_pos, Y_pos = self.get_openai_response(my_car)
+                    else:
+                        Move ="Go"
+                        X_pos = my_car.X
+                        Y_pos = my_car.Y + 1
                     my_car.queue_update(X_pos, Y_pos, Move)
                     print(f"{my_car.color} car chose {Move}")
                 else:
                     print(f"{my_car.color} car has exited")
 
-            for my_car in [self.green_car, self.red_car]:
+            self.position_count = defaultdict(int)
+            for my_car in self.car_list:
                 if my_car.playing:
                     my_car.update_position()
+                    self.position_count[(my_car.X, my_car.Y)] += 1
 
-            for my_car in [self.green_car, self.red_car]:
+            for my_car in self.car_list:
                 if my_car.playing:
-                    if self.check_crash():
+                    if self.check_crash(my_car):
                         my_car.set_reward_from_crash()
                     else:
                         my_car.set_reward_from_move()
@@ -86,16 +94,30 @@ class DrivingGame:
             # increment time
             time_step += 1
     
-    def check_crash(self):
-        return self.green_car.playing == True and \
-               self.red_car.playing   == True and \
-               self.green_car.X == self.red_car.X and \
-               self.green_car.Y == self.red_car.Y
+    def check_all_car_not_playing(self):
+        for my_car in self.car_list:
+            if my_car.playing:
+                return False
+        return True
+    
+    def check_any_car_crash(self):
+        for car in self.car_list:
+            if car.playing and self.check_crash(car):
+                return True
+
+
+    def check_crash(self, car):
+        return self.position_count[(car.X, car.Y)] > 1
 
     # get ai repsonse without changing anything variables yet
     def get_openai_response(self, my_car: Car) -> tuple[str, int, int]:
         # call as green or red
-        other_car: Car = self.red_car if my_car == self.green_car else self.green_car
+        # other_car: Car = self.red_car if my_car == self.green_car else self.green_car
+        other_car_list = list()
+        for car in self.car_list:
+            if my_car == car:
+                continue
+            other_car_list.append(car)
 
         # chatgpt prompt
         prompt = []
@@ -109,19 +131,24 @@ class DrivingGame:
 
         # message prompt
         myPosition = f"({my_car.X},{my_car.Y})"
-        otherPosition = f"({other_car.X},{other_car.Y})" if other_car.playing else "somewhere outside this grid, no longer relevant"
+        otherPosition = [f"({other_car.X},{other_car.Y})" if other_car.playing else "somewhere outside this grid, no longer relevant"
+                         for other_car in other_car_list]
+        otherColor = [f"{other_car.color}" for other_car in other_car_list]
         user_prompt = {
             'role' : 'user', 
             'content' : self._user_prompt_str.replace('{myColor}', my_car.color)
                                              .replace('{myPosition}', myPosition)
-                                             .replace('{otherColor}', other_car.color)
-                                             .replace('{otherPosition}', otherPosition)
+                                             .replace('{otherColor0}', otherColor[0])
+                                             .replace('{otherColor1}', otherColor[1])
+                                             .replace('{otherPosition0}', otherPosition[0])
+                                             .replace('{otherPosition1}', otherPosition[1])
                                              .replace('{myReward}',str(my_car.reward))
         }
         prompt.append(user_prompt)
-        
+       
         # Get AI response
-        response = openai.chat.completions.create(
+        client = openai.OpenAI()
+        response = client.chat.completions.create(
             model='gpt-4',
             messages=prompt,
             temperature=0,
@@ -143,10 +170,10 @@ class DrivingGame:
 if __name__ == "__main__":
     # load openai key
     load_dotenv()
-    openai.api_key = os.environ['OPENAI_KEY']
+    openai.api_key = os.environ['OPENAI_API_KEY']
     
     # load config
-    with open('./intersection/.config') as f:    config = json.load(f)
+    with open('.config') as f:    config = json.load(f)
     _system_prompt_str = config['system']
     _user_prompt_str = config['user']
     
