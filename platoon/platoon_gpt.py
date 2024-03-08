@@ -20,8 +20,12 @@ class Car:
         self.reward -= 5
     
     def set_reward_from_move(self):
-        if self.MoveUpdate != "LaneChange":
+        if self.MoveUpdate == "Lane":
             self.reward -= 2
+        elif self.MoveUpdate == "Go":
+            self.reward -= 2
+        elif self.MoveUpdate == "Stop":
+            self.reward -=2
 
     def set_reward_from_platoon(self):
         self.reward += 2
@@ -102,8 +106,8 @@ class DrivingGame:
         return self.green_car.playing == True and \
                self.red_car.playing   == True and \
                self.green_car.X == self.red_car.X and \
-               (self.green_car.Y == self.red_car.Y + 1 or \
-                self.green_car.Y == self.red_car.Y - 1)
+               (self.green_car.Y == self.red_car.Y + 3 or \
+                self.green_car.Y == self.red_car.Y - 3)
 
     # get ai repsonse without changing anything variables yet
     def get_openai_response(self, my_car: Car) -> tuple[str, int, int]:
