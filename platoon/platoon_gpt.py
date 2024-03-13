@@ -121,17 +121,24 @@ class DrivingGame:
         for car in self.car_list:
             if car.playing and self.check_crash(car):
                 return True
+        return False
 
     def check_crash(self, car):
         return self.position_count[(car.X, car.Y)] > 1
+    
+    def check_any_car_platoon(self):
+        platoon_dict = defaultdict(bool)
+        for car in self.car_list:
+            if car.playing and self.check_platoon(car):
+                platoon_dict[car.X] = True
+        return platoon_dict
     
     def check_platoon(self, car):
         for Y in range(car.Y - self.platoon_spacing, 
                        car.Y + self.platoon_spacing + 1):
             if Y != car.Y and self.position_count[(car.X, Y)]:
                 return True
-                
-
+        return False
 
     # get ai repsonse without changing anything variables yet
     def get_openai_response(self, my_car: Car) -> tuple[str, int, int]:
