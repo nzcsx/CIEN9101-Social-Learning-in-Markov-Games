@@ -109,19 +109,17 @@ class DrivingGame:
             if car.playing and self.check_crash(car):
                 return True
 
-
     def check_crash(self, car):
         return self.position_count[(car.X, car.Y)] > 1
 
     # get ai repsonse without changing anything variables yet
-    def get_openai_response(self, myCar: Car) -> tuple[str, int, int]:
+    def get_openai_response(self, my_car: Car) -> tuple[str, int, int]:
         # call as green or red
-        # All the otherCars in the list
-        otherCar_list = list()
+        # All the other_cars in the list
+        other_car_list = list()
         for car in self.car_list:
-            if myCar == car:
-                continue
-            otherCar_list.append(car)
+            if my_car != car:
+                other_car_list.append(car)
 
         # chatgpt prompt
         prompt = []
@@ -136,16 +134,16 @@ class DrivingGame:
         # user prompt
         user_prompt = ""
         
-        for otherCar in otherCar_list:
-            otherPosition = f"({otherCar.X},{otherCar.Y})" if otherCar.playing else \
+        for other_car in other_car_list:
+            other_position = f"({other_car.X},{other_car.Y})" if other_car.playing else \
                             "somewhere outside this grid, no longer relevant"
-            user_prompt += self._otherCar_prompt_str.replace('{otherColor}', otherCar.color) \
-                                                    .replace('{otherPosition}', otherPosition)
+            user_prompt += self._otherCar_prompt_str.replace('{otherColor}', other_car.color) \
+                                                    .replace('{otherPosition}', other_position)
         
-        myPosition = f"({myCar.X},{myCar.Y})"
-        user_prompt += self._myCar_prompt_str.replace('{myColor}', myCar.color) \
-                                             .replace('{myPosition}', myPosition) \
-                                             .replace('{myReward}',str(myCar.reward))
+        my_position = f"({my_car.X},{my_car.Y})"
+        user_prompt += self._myCar_prompt_str.replace('{myColor}', my_car.color) \
+                                             .replace('{myPosition}', my_position) \
+                                             .replace('{myReward}',str(my_car.reward))
         
         user_prompt = {
             'role' : 'user', 
