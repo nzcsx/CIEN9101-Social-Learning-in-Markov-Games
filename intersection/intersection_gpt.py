@@ -108,6 +108,7 @@ class DrivingGame:
         for car in self.car_list:
             if car.playing and self.check_crash(car):
                 return True
+        return False
 
     def check_crash(self, car):
         return self.position_count[(car.X, car.Y)] > 1
