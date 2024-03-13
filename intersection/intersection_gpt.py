@@ -89,10 +89,9 @@ class DrivingGame:
             # Update reward
             for my_car in self.car_list:
                 if my_car.playing:
+                    my_car.set_reward_from_move()
                     if self.check_crash(my_car):
                         my_car.set_reward_from_crash()
-                    else:
-                        my_car.set_reward_from_move()
             
             print('\n')
 
