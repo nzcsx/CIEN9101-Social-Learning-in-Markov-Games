@@ -5,13 +5,14 @@
 2. Go to this directory. 
 3. Edit the `.config` file with your prefered prompts in json format.
     ```
-    { "system" : "Your system prompt text goes here." ,
-        "user" : "Your user   prompt text goes here." }
+    { "system"   : "Your system prompt text goes here." ,
+      "otherCar" : "Your otherCar prompt text goes here.",
+      "myCar"    : "Your myCar prompt text goes here." }
     ```
     a. `system` prompt contains the setup of the markov game. 
     - Given: environment space $S$, action space $A$, and reward function $R$
 
-    b. `user` prompt shows the current observation of agent $i$, and asks what action to choose. 
+    b. `otherCar` and `myCar` prompts combine to form the `user` prompt, which shows the current observation of agent $i$, and asks what action to choose. 
     - Given: observation $o_i$. 
     - Asking: action $a_i$
 
