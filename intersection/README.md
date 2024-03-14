@@ -21,7 +21,7 @@
     ```
     OPENAI_KEY = ##########
     ```
-5. Run the main python script. 
+5. Run the python script. 
     ```
-    python main.py
+    python intersection_gpt.py
     ```
