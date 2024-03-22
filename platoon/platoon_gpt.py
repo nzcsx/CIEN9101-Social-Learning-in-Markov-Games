@@ -3,7 +3,7 @@ import json
 import openai
 from dotenv import load_dotenv
 from collections import defaultdict
-
+import pandas as pd
 
 
 class Car:
@@ -16,10 +16,10 @@ class Car:
         self.XUpdate = X
         self.YUpdate = Y
         self.MoveUpdate = "Go"
-    
+
     def set_reward_from_crash(self):
         self.reward -= 5
-    
+
     def set_reward_from_move(self):
         if self.MoveUpdate == "Lane":
             self.reward -= 5
@@ -30,12 +30,12 @@ class Car:
 
     def set_reward_from_platoon(self):
         self.reward += 2
-    
+
     def queue_update(self, X, Y, Move):
         self.XUpdate = X
         self.YUpdate = Y
         self.MoveUpdate = Move
-    
+
     def update_position(self):
         self.X = self.XUpdate
         self.Y = self.YUpdate
@@ -53,15 +53,18 @@ class DrivingGame:
         self._myCar_prompt_str = _myCar_prompt_str
         # Number of cars at given coordinates; convenient for checking crash
         self.position_count = defaultdict(int)
+        self.output = list()
 
     def play(self):
         time_step = 1
         while True:
             # status at the beginning of the time step
-            print(f"Time Step {time_step}:")
+            self.output.append({"Time_stamp": time_step})
             for my_car in self.car_list:
                 if my_car.playing:
-                    print(f"{my_car.color} car: ({my_car.X}, {my_car.Y}), {my_car.reward}")
+                    self.output[time_step - 1][str(my_car.color + "_car_x")] = my_car.X
+                    self.output[time_step - 1][str(my_car.color + "_car_y")] = my_car.Y
+                    self.output[time_step - 1][str(my_car.color + "_car_reward")] = my_car.reward
                     # exit game if needed
                     my_car.playing = (my_car.Y != self.road_length)
             print('\n')
@@ -69,10 +72,10 @@ class DrivingGame:
             # check game end
             if self.check_any_car_crash():
                 print('Car crash. Game over.')
-                break
+                return self.output, 0
             if self.check_all_car_not_playing():
                 print(f"Both green and red cars reached the end of the road. Game over.")
-                break
+                return self.output, 1
             if time_step > 25:
                 break
 
@@ -82,11 +85,12 @@ class DrivingGame:
                     if my_car.color != "white":
                         Move, X_pos, Y_pos = self.get_openai_response(my_car)
                     else:
-                        Move ="Go"
+                        Move = "Go"
                         X_pos = my_car.X
                         Y_pos = my_car.Y + 1
                     my_car.queue_update(X_pos, Y_pos, Move)
-                    print(f"{my_car.color} car chose {Move}")
+                    self.output[time_step - 1][str(my_car.color + "_car_decision")] = Move
+                    # print(f"{my_car.color} car chose {Move}")
                 else:
                     print(f"{my_car.color} car has exited")
 
@@ -105,7 +109,7 @@ class DrivingGame:
                         my_car.set_reward_from_crash()
                     if self.check_platoon(my_car):
                         my_car.set_reward_from_platoon()
-            
+
             print('\n')
 
             # increment time
@@ -116,7 +120,7 @@ class DrivingGame:
             if my_car.playing:
                 return False
         return True
-    
+
     def check_any_car_crash(self):
         for car in self.car_list:
             if car.playing and self.check_crash(car):
@@ -125,16 +129,16 @@ class DrivingGame:
 
     def check_crash(self, car):
         return self.position_count[(car.X, car.Y)] > 1
-    
+
     def check_any_car_platoon(self):
         platoon_dict = defaultdict(bool)
         for car in self.car_list:
             if car.playing and self.check_platoon(car):
                 platoon_dict[car.X] = True
         return platoon_dict
-    
+
     def check_platoon(self, car):
-        for Y in range(car.Y - self.platoon_spacing, 
+        for Y in range(car.Y - self.platoon_spacing,
                        car.Y + self.platoon_spacing + 1):
             if Y != car.Y and self.position_count[(car.X, Y)]:
                 return True
@@ -151,34 +155,34 @@ class DrivingGame:
 
         # chatgpt prompt
         prompt = []
-        
+
         # system prompt
         system_prompt = {
-            'role' : 'system', 
-            'content' : self._system_prompt_str 
+            'role': 'system',
+            'content': self._system_prompt_str
         }
         prompt.append(system_prompt)
 
         # user prompt
         user_prompt = ""
-        
+
         for other_car in other_car_list:
             other_position = f"({other_car.X},{other_car.Y})" if other_car.playing else \
-                            "somewhere outside this grid, no longer relevant"
+                "somewhere outside this grid, no longer relevant"
             user_prompt += self._otherCar_prompt_str.replace('{otherColor}', other_car.color) \
-                                                    .replace('{otherPosition}', other_position)
-        
+                .replace('{otherPosition}', other_position)
+
         my_position = f"({my_car.X},{my_car.Y})"
         user_prompt += self._myCar_prompt_str.replace('{myColor}', my_car.color) \
-                                             .replace('{myPosition}', my_position) \
-                                             .replace('{myReward}',str(my_car.reward))
-        
+            .replace('{myPosition}', my_position) \
+            .replace('{myReward}', str(my_car.reward))
+
         user_prompt = {
-            'role' : 'user', 
-            'content' : user_prompt
+            'role': 'user',
+            'content': user_prompt
         }
         prompt.append(user_prompt)
-       
+
         # Get AI response
         response = openai.chat.completions.create(
             model='gpt-4',
@@ -199,17 +203,40 @@ class DrivingGame:
         return Move, X_pos, Y_pos
 
 
+def simulation(output_name: str, num_of_simulation: int, game_setup: DrivingGame):
+    df = list()
+    counter = 0
+
+    for i in range(num_of_simulation):
+        new_rows, success = game_setup.play()
+        print(new_rows)
+        counter += success
+        print(counter)
+        for row in new_rows:
+            row['Simulation'] = i + 1
+
+        new_df = pd.DataFrame(new_rows)
+        if len(df) == 0:
+            df = new_df
+        else:
+            df = pd.concat([df, new_df], ignore_index=True)
+
+        print(i + 1, "-th simulation complete")
+
+    df.to_csv(output_name + '.csv', index=False)
+
+
 if __name__ == "__main__":
     # load openai key
     load_dotenv()
 
     openai.api_key = os.environ['OPENAI_KEY']
-    
+
     # load config
     with open('.config') as f:    config = json.load(f)
     _system_prompt_str = config['system']
     _otherCar_prompt_str = config['otherCar']
     _myCar_prompt_str = config['myCar']
-    
+
     game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str)
-    game.play()
+    simulation("output_with_bg", 50, game)
