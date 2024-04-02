@@ -4,4 +4,23 @@
 	"otherCar" : "A {otherColor} car is currently at {otherPosition}."
 	,
 	"myCar" : "You are the {myColor} car, you are currently at {myPosition}. Currently your reward is {myReward}. What is your choice of move? What is your position after the move? Reply in the format of only (Move,PosX,PosY)"
+	,
+	"carList" : 
+	[
+		{
+			"X" : "1",
+			"Y" : "5", 
+			"color" : "green"
+		}, 
+		{
+			"X" : "5", 
+			"Y" : "1", 
+			"color" : "red"
+		}, 
+		{
+			"X" : "5", 
+			"Y" : "2", 
+			"color" : "white"
+		}
+	]
 }

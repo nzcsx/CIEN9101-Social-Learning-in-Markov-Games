@@ -34,33 +34,39 @@ class Car:
 
 
 class DrivingGame:
-    def __init__(self, _system_prompt_str: str, _otherCar_prompt_str: str, _myCar_prompt_str: str):
-        self.car_list = [Car(1, 5, "green"), Car(5, 1, "red"), Car(5, 2, "white")]
+    def __init__(self, _system_prompt_str: str, _otherCar_prompt_str: str, _myCar_prompt_str: str, _carList: list[dict[str,str]]):
+        # Car list
+        self.car_list = [Car(int(_carData["X"]), \
+                             int(_carData["Y"]), \
+                             str(_carData["color"])) for _carData in _carList]
         # Prompt templates
         self._system_prompt_str = _system_prompt_str
         self._otherCar_prompt_str = _otherCar_prompt_str
         self._myCar_prompt_str = _myCar_prompt_str
         # Number of cars at given coordinates; convenient for checking crash
         self.position_count = defaultdict(int)
+        # Outputs
+        self.output_txt = ""
+        self.output_cvs = ""
 
     def play(self):
         time_step = 1
         while True:
             # status at the beginning of the time step
-            print(f"Time Step {time_step}:")
+            self.output_txt += f"Time Step {time_step}:\n"
             for my_car in self.car_list:
                 if my_car.playing:
-                    print(f"{my_car.color} car: ({my_car.X}, {my_car.Y}), {my_car.reward}")
+                    self.output_txt += f"{my_car.color} car: ({my_car.X}, {my_car.Y}), {my_car.reward}\n"
                     # exit game if needed
                     my_car.playing = (my_car.X != 9) if my_car.color=="green" else (my_car.Y != 9)
-            print('\n')
+            self.output_txt += "\n"
 
             # check game end
             if self.check_any_car_crash():
-                print('Car crash. Game over.')
+                self.output_txt += "Car crash. Game over.\n"
                 break
             if self.check_all_car_not_playing():
-                print(f"Both green and red cars reached the end of the road. Game over.")
+                self.output_txt += "Both green and red cars reached the end of the road. Game over.\n"
                 break
             if time_step > 25:
                 break
@@ -75,9 +81,9 @@ class DrivingGame:
                         X_pos = my_car.X
                         Y_pos = my_car.Y + 1
                     my_car.queue_update(X_pos, Y_pos, Move)
-                    print(f"{my_car.color} car chose {Move}")
+                    self.output_txt += f"{my_car.color} car chose {Move}\n"
                 else:
-                    print(f"{my_car.color} car has exited")
+                    self.output_txt += f"{my_car.color} car has exited\n"
             
             # Update position and position_count
             self.position_count = defaultdict(int)
@@ -93,7 +99,7 @@ class DrivingGame:
                     if self.check_crash(my_car):
                         my_car.set_reward_from_crash()
             
-            print('\n')
+            self.output_txt += "\n\n"
 
             # increment time
             time_step += 1
@@ -179,10 +185,13 @@ if __name__ == "__main__":
     openai.api_key = os.environ['OPENAI_KEY']
     
     # load config
-    with open('.config') as f:    config = json.load(f)
+    with open('.config_with_bg', 'r') as f:    config = json.load(f)
     _system_prompt_str = config['system']
     _otherCar_prompt_str = config['otherCar']
     _myCar_prompt_str = config['myCar']
+    _carList = config['carList']
     
-    game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str)
+    game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList)
     game.play()
+
+    with open('output.txt', 'w') as f:    f.write(game.output_txt)
