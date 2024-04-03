@@ -50,35 +50,34 @@ class DrivingGame:
         self.position_count = defaultdict(int)
         # Outputs
         self.output_txt = ""
-        self.output_cvs = ""
+        self.output_csv = "Time step, " + "".join(["Color, X, Y, Reward, Move, " for _ in _carList]) + "\n"
 
     def play(self):
         time_step = 1
-        while True:
+        while not self.check_all_cars_not_playing():
             # status at the beginning of the time step
             self.output_txt += f"Time Step {time_step}:\n"
-            self.output_cvs += f"{time_step}, "
+            self.output_csv += f"{time_step}, "
             for my_car in self.car_list:
                 if my_car.playing:
-                    self.output_txt += f"{my_car.color} car: ({my_car.X}, {my_car.Y}), {my_car.reward}\n"
-                    self.output_cvs += f"{my_car.color}, {my_car.X}, {my_car.Y}, {my_car.reward}, "
                     # exit game if needed
                     my_car.playing = (my_car.X != 9) if my_car.color=="green" else (my_car.Y != 9)
-                else:
-                    self.output_cvs += f",,,, "
-            self.output_txt += "\n"
 
             # check game end
+            conclusion_txt = ""
+            conclusion_csv = ""
             if self.check_any_car_crash():
-                self.output_txt += "Car crash. Game over.\n\n\n"
-                self.output_cvs += "\n\n"
-                break
-            if self.check_all_car_not_playing():
-                self.output_txt += "Both green and red cars reached the end of the road. Game over.\n\n\n"
-                self.output_cvs += "\n\n"
-                break
+                conclusion_txt += "Car crash. Game over.\n"
+                conclusion_csv += "\n"
+                for car in self.car_list:    car.playing = False
+            if self.check_all_cars_not_playing():
+                conclusion_txt += "All cars reached the end of the road. Game over.\n"
+                conclusion_csv += "\n"
+                for car in self.car_list:    car.playing = False
             if time_step > 25:
-                break
+                conclusion_txt += "Timed out\n"
+                conclusion_csv += "\n"
+                for car in self.car_list:    car.playing = False
 
             # Get (and queue) move update
             for my_car in self.car_list:
@@ -86,13 +85,28 @@ class DrivingGame:
                     if my_car.color != "white":
                         Move, X_pos, Y_pos = self.get_openai_response(my_car)
                     else:
-                        Move ="Go"
-                        X_pos = my_car.X
-                        Y_pos = my_car.Y + 1
+                        Move, X_pos, Y_pos = ("Go", my_car.X, my_car.Y + 1)
                     my_car.queue_update(X_pos, Y_pos, Move)
-                    self.output_txt += f"{my_car.color} car chose {Move}\n"
+            
+            # Output
+            for car in self.car_list:
+                if car.playing:
+                    self.output_txt += f"{car.color} car: ({car.X}, {car.Y}), {car.reward}\n"
+                    self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, {car.MoveUpdate}, "
+                elif car.MoveUpdate != "Exited":
+                    self.output_txt += f"{car.color} car: ({car.X}, {car.Y}), {car.reward}\n"
+                    self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, , "
+                    car.MoveUpdate = "Exited"
                 else:
-                    self.output_txt += f"{my_car.color} car has exited\n"
+                    self.output_csv += f",,,,, "
+            self.output_txt += "\n"
+            self.output_csv += "\n"
+            for car in self.car_list:
+                if car.playing:
+                    self.output_txt += f"{car.color} car chose {Move}\n"
+
+            self.output_txt += conclusion_txt + "\n\n"
+            self.output_csv += conclusion_csv
             
             # Update position and position_count
             self.position_count = defaultdict(int)
@@ -107,27 +121,28 @@ class DrivingGame:
                     my_car.set_reward_from_move()
                     if self.check_crash(my_car):
                         my_car.set_reward_from_crash()
-            
-            self.output_txt += "\n\n"
-            self.output_cvs += "\n"
 
             # increment time
             time_step += 1
-    
-    def check_all_car_not_playing(self):
+
+   
+    def check_all_cars_not_playing(self):
         for my_car in self.car_list:
             if my_car.playing:
                 return False
         return True
-    
+
+
     def check_any_car_crash(self):
         for car in self.car_list:
             if car.playing and self.check_crash(car):
                 return True
         return False
 
+
     def check_crash(self, car):
         return self.position_count[(car.X, car.Y)] > 1
+
 
     # get ai repsonse without changing anything variables yet
     def get_openai_response(self, my_car: Car) -> tuple[str, int, int]:
@@ -194,9 +209,7 @@ def simulate_and_output(_system_prompt_str: str, _otherCar_prompt_str: str, _myC
     for i in range(1, num_sims+1):
         # Outputs
         accumulated_txt += f"=== Sim {i} ===\n"
-        accumulated_csv += f"===, Sim {i}, ===\nTime step, "
-        for _ in (_carList):    accumulated_csv += "Color, X, Y, Reward, "
-        accumulated_csv += "\n"
+        accumulated_csv += f"===, Sim {i}, ===\n"
 
         # Run game
         game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList)
@@ -204,7 +217,7 @@ def simulate_and_output(_system_prompt_str: str, _otherCar_prompt_str: str, _myC
 
         # Outputs
         accumulated_txt += game.output_txt
-        accumulated_csv += game.output_cvs
+        accumulated_csv += game.output_csv
 
     # Outputs
     with open(output_file + ".txt", 'w') as f:    f.write(accumulated_txt)
@@ -229,7 +242,6 @@ if __name__ == "__main__":
 
     if not os.path.isfile(config_file):
         sys.exit("Configuration file path is incorrect")
-
 
     # Load openai key
     load_dotenv()
