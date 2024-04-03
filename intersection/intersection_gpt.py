@@ -70,10 +70,12 @@ class DrivingGame:
 
             # check game end
             if self.check_any_car_crash():
-                self.output_txt += "Car crash. Game over.\n"
+                self.output_txt += "Car crash. Game over.\n\n\n"
+                self.output_cvs += "\n\n"
                 break
             if self.check_all_car_not_playing():
-                self.output_txt += "Both green and red cars reached the end of the road. Game over.\n"
+                self.output_txt += "Both green and red cars reached the end of the road. Game over.\n\n\n"
+                self.output_cvs += "\n\n"
                 break
             if time_step > 25:
                 break
@@ -106,7 +108,7 @@ class DrivingGame:
                     if self.check_crash(my_car):
                         my_car.set_reward_from_crash()
             
-            self.output_txt += "\n\n"
+            self.output_txt += "\n"
             self.output_cvs += "\n"
 
             # increment time
@@ -170,7 +172,7 @@ class DrivingGame:
         response = openai.chat.completions.create(
             model='gpt-4',
             messages=prompt,
-            temperature=0,
+            temperature=0.0,
             max_tokens=10,
         )
         rspns_text = response.choices[0].message.content
@@ -183,18 +185,47 @@ class DrivingGame:
         return Move, X_pos, Y_pos
 
 
+def simulate_and_output(_system_prompt_str: str, _otherCar_prompt_str: str, _myCar_prompt_str: str, _carList: list[dict[str,str]], 
+                          output_file: str, num_sims: int):
+    # Accumulated outputs
+    accumulated_txt = ""
+    accumulated_csv = ""
+
+    for i in range(1, num_sims+1):
+        # Outputs
+        accumulated_txt += f"=== Sim {i} ===\n"
+        accumulated_csv += f"===, Sim {i}, ===\nTime step, "
+        for _ in (_carList):    accumulated_csv += "Color, X, Y, Reward, "
+        accumulated_csv += "\n"
+
+        # Run game
+        game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList)
+        game.play()
+
+        # Outputs
+        accumulated_txt += game.output_txt
+        accumulated_csv += game.output_cvs
+
+    # Outputs
+    with open(output_file + ".txt", 'w') as f:    f.write(accumulated_txt)
+    with open(output_file + ".csv", 'w') as f:    f.write(accumulated_csv)
+
+
 if __name__ == "__main__":
     # Command line arguments
-    parser = argparse.ArgumentParser(description='LLM Intersection Simulator')
-
+    parser = argparse.ArgumentParser(
+        description='LLM Intersection Simulator')
     parser.add_argument(dest="config_file", type=str, 
-        help='Configuration file with json content')
+        help="Configuration file with json content")
     parser.add_argument(dest="output_file", type=str, 
-        help='Output filename without file extension')
+        help="Output filename without file extension")
+    parser.add_argument(dest="num_sims", type=int, 
+        help="Number of simulations")
     
     args = parser.parse_args()
     config_file = args.config_file
     output_file = args.output_file
+    num_sims =  args.num_sims
 
     if not os.path.isfile(config_file):
         sys.exit("Configuration file path is incorrect")
@@ -210,11 +241,7 @@ if __name__ == "__main__":
     _otherCar_prompt_str = config['otherCar']
     _myCar_prompt_str = config['myCar']
     _carList = config['carList']
-    
-    # Run game
-    game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList)
-    game.play()
 
-    # Output
-    with open(output_file + ".txt", 'w') as f:    f.write(game.output_txt)
-    with open(output_file + ".csv", 'w') as f:    f.write(game.output_cvs)
+    # Simulate and output
+    simulate_and_output(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList,
+                        output_file, num_sims)
