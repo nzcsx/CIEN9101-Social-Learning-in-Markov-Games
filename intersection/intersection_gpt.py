@@ -108,7 +108,7 @@ class DrivingGame:
                     if self.check_crash(my_car):
                         my_car.set_reward_from_crash()
             
-            self.output_txt += "\n"
+            self.output_txt += "\n\n"
             self.output_cvs += "\n"
 
             # increment time
