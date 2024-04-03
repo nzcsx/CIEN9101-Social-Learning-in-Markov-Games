@@ -1,5 +1,8 @@
 import os
+import sys
 import json
+import argparse
+
 import openai
 from dotenv import load_dotenv
 from collections import defaultdict
@@ -54,11 +57,15 @@ class DrivingGame:
         while True:
             # status at the beginning of the time step
             self.output_txt += f"Time Step {time_step}:\n"
+            self.output_cvs += f"{time_step}, "
             for my_car in self.car_list:
                 if my_car.playing:
                     self.output_txt += f"{my_car.color} car: ({my_car.X}, {my_car.Y}), {my_car.reward}\n"
+                    self.output_cvs += f"{my_car.color}, {my_car.X}, {my_car.Y}, {my_car.reward}, "
                     # exit game if needed
                     my_car.playing = (my_car.X != 9) if my_car.color=="green" else (my_car.Y != 9)
+                else:
+                    self.output_cvs += f",,,, "
             self.output_txt += "\n"
 
             # check game end
@@ -100,6 +107,7 @@ class DrivingGame:
                         my_car.set_reward_from_crash()
             
             self.output_txt += "\n\n"
+            self.output_cvs += "\n"
 
             # increment time
             time_step += 1
@@ -176,19 +184,37 @@ class DrivingGame:
 
 
 if __name__ == "__main__":
-    # load openai key
-    load_dotenv()
+    # Command line arguments
+    parser = argparse.ArgumentParser(description='LLM Intersection Simulator')
 
+    parser.add_argument(dest="config_file", type=str, 
+        help='Configuration file with json content')
+    parser.add_argument(dest="output_file", type=str, 
+        help='Output filename without file extension')
+    
+    args = parser.parse_args()
+    config_file = args.config_file
+    output_file = args.output_file
+
+    if not os.path.isfile(config_file):
+        sys.exit("Configuration file path is incorrect")
+
+
+    # Load openai key
+    load_dotenv()
     openai.api_key = os.environ['OPENAI_KEY']
     
-    # load config
-    with open('.config_with_bg', 'r') as f:    config = json.load(f)
+    # Load config
+    with open(config_file, 'r') as f:    config = json.load(f)
     _system_prompt_str = config['system']
     _otherCar_prompt_str = config['otherCar']
     _myCar_prompt_str = config['myCar']
     _carList = config['carList']
     
+    # Run game
     game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList)
     game.play()
 
-    with open('output.txt', 'w') as f:    f.write(game.output_txt)
+    # Output
+    with open(output_file + ".txt", 'w') as f:    f.write(game.output_txt)
+    with open(output_file + ".csv", 'w') as f:    f.write(game.output_cvs)

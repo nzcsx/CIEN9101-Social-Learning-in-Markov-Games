@@ -3,7 +3,7 @@
 	,
 	"otherCar" : "A {otherColor} car is currently at {otherPosition}."
 	,
-	"myCar" : "You are the {myColor} car, you are currently at {myPosition}. Currently your reward is {myReward}. What is your choice of move? What is your position after the move? Reply in the format of only (Move,PosX,PosY)"
+	"myCar" : "You are the {myColor} car, you are currently at {myPosition}. Currently your reward is {myReward}. What is your choice of move to complete the trip as fast as possible and to maximize your reward? What is your position after the move? Reply in the format of only (Move,PosX,PosY)"
 	,
 	"carList" : 
 	[
