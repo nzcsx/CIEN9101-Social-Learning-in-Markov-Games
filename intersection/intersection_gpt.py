@@ -1,5 +1,8 @@
 import os
+import sys
 import json
+import argparse
+
 import openai
 from dotenv import load_dotenv
 from collections import defaultdict
@@ -34,36 +37,47 @@ class Car:
 
 
 class DrivingGame:
-    def __init__(self, _system_prompt_str: str, _otherCar_prompt_str: str, _myCar_prompt_str: str):
-        self.car_list = [Car(1, 5, "green"), Car(5, 1, "red"), Car(5, 2, "white")]
+    def __init__(self, _system_prompt_str: str, _otherCar_prompt_str: str, _myCar_prompt_str: str, _carList: list[dict[str,str]]):
+        # Car list
+        self.car_list = [Car(int(_carData["X"]), \
+                             int(_carData["Y"]), \
+                             str(_carData["color"])) for _carData in _carList]
         # Prompt templates
         self._system_prompt_str = _system_prompt_str
         self._otherCar_prompt_str = _otherCar_prompt_str
         self._myCar_prompt_str = _myCar_prompt_str
         # Number of cars at given coordinates; convenient for checking crash
         self.position_count = defaultdict(int)
+        # Outputs
+        self.output_txt = ""
+        self.output_csv = "Time step, " + "".join(["Color, X, Y, Reward, Move, " for _ in _carList]) + "\n"
 
     def play(self):
         time_step = 1
-        while True:
+        while not self.check_all_cars_not_playing():
             # status at the beginning of the time step
-            print(f"Time Step {time_step}:")
+            self.output_txt += f"Time Step {time_step}:\n"
+            self.output_csv += f"{time_step}, "
             for my_car in self.car_list:
                 if my_car.playing:
-                    print(f"{my_car.color} car: ({my_car.X}, {my_car.Y}), {my_car.reward}")
                     # exit game if needed
                     my_car.playing = (my_car.X != 9) if my_car.color=="green" else (my_car.Y != 9)
-            print('\n')
 
             # check game end
+            conclusion_txt = ""
+            conclusion_csv = ""
             if self.check_any_car_crash():
-                print('Car crash. Game over.')
-                break
-            if self.check_all_car_not_playing():
-                print(f"Both green and red cars reached the end of the road. Game over.")
-                break
+                conclusion_txt += "Car crash. Game over.\n"
+                conclusion_csv += "\n"
+                for car in self.car_list:    car.playing = False
+            if self.check_all_cars_not_playing():
+                conclusion_txt += "All cars reached the end of the road. Game over.\n"
+                conclusion_csv += "\n"
+                for car in self.car_list:    car.playing = False
             if time_step > 25:
-                break
+                conclusion_txt += "Timed out\n"
+                conclusion_csv += "\n"
+                for car in self.car_list:    car.playing = False
 
             # Get (and queue) move update
             for my_car in self.car_list:
@@ -71,13 +85,28 @@ class DrivingGame:
                     if my_car.color != "white":
                         Move, X_pos, Y_pos = self.get_openai_response(my_car)
                     else:
-                        Move ="Go"
-                        X_pos = my_car.X
-                        Y_pos = my_car.Y + 1
+                        Move, X_pos, Y_pos = ("Go", my_car.X, my_car.Y + 1)
                     my_car.queue_update(X_pos, Y_pos, Move)
-                    print(f"{my_car.color} car chose {Move}")
+            
+            # Output
+            for car in self.car_list:
+                if car.playing:
+                    self.output_txt += f"{car.color} car: ({car.X}, {car.Y}), {car.reward}\n"
+                    self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, {car.MoveUpdate}, "
+                elif car.MoveUpdate != "Exited":
+                    self.output_txt += f"{car.color} car: ({car.X}, {car.Y}), {car.reward}\n"
+                    self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, , "
+                    car.MoveUpdate = "Exited"
                 else:
-                    print(f"{my_car.color} car has exited")
+                    self.output_csv += f",,,,, "
+            self.output_txt += "\n"
+            self.output_csv += "\n"
+            for car in self.car_list:
+                if car.playing:
+                    self.output_txt += f"{car.color} car chose {Move}\n"
+
+            self.output_txt += conclusion_txt + "\n\n"
+            self.output_csv += conclusion_csv
             
             # Update position and position_count
             self.position_count = defaultdict(int)
@@ -92,26 +121,28 @@ class DrivingGame:
                     my_car.set_reward_from_move()
                     if self.check_crash(my_car):
                         my_car.set_reward_from_crash()
-            
-            print('\n')
 
             # increment time
             time_step += 1
-    
-    def check_all_car_not_playing(self):
+
+   
+    def check_all_cars_not_playing(self):
         for my_car in self.car_list:
             if my_car.playing:
                 return False
         return True
-    
+
+
     def check_any_car_crash(self):
         for car in self.car_list:
             if car.playing and self.check_crash(car):
                 return True
         return False
 
+
     def check_crash(self, car):
         return self.position_count[(car.X, car.Y)] > 1
+
 
     # get ai repsonse without changing anything variables yet
     def get_openai_response(self, my_car: Car) -> tuple[str, int, int]:
@@ -156,11 +187,8 @@ class DrivingGame:
         response = openai.chat.completions.create(
             model='gpt-4',
             messages=prompt,
-            temperature=0,
+            temperature=0.0,
             max_tokens=10,
-            top_p=1,
-            frequency_penalty=0.0,
-            presence_penalty=0.0
         )
         rspns_text = response.choices[0].message.content
 
@@ -172,17 +200,60 @@ class DrivingGame:
         return Move, X_pos, Y_pos
 
 
-if __name__ == "__main__":
-    # load openai key
-    load_dotenv()
+def simulate_and_output(_system_prompt_str: str, _otherCar_prompt_str: str, _myCar_prompt_str: str, _carList: list[dict[str,str]], 
+                          output_file: str, num_sims: int):
+    # Accumulated outputs
+    accumulated_txt = ""
+    accumulated_csv = ""
 
+    for i in range(1, num_sims+1):
+        # Outputs
+        accumulated_txt += f"=== Sim {i} ===\n"
+        accumulated_csv += f"===, Sim {i}, ===\n"
+
+        # Run game
+        game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList)
+        game.play()
+
+        # Outputs
+        accumulated_txt += game.output_txt
+        accumulated_csv += game.output_csv
+
+    # Outputs
+    with open(output_file + ".txt", 'w') as f:    f.write(accumulated_txt)
+    with open(output_file + ".csv", 'w') as f:    f.write(accumulated_csv)
+
+
+if __name__ == "__main__":
+    # Command line arguments
+    parser = argparse.ArgumentParser(
+        description='LLM Intersection Simulator')
+    parser.add_argument(dest="config_file", type=str, 
+        help="Configuration file path")
+    parser.add_argument(dest="output_file", type=str, 
+        help="Output file path without file extension")
+    parser.add_argument(dest="num_sims", type=int, 
+        help="Number of simulations")
+    
+    args = parser.parse_args()
+    config_file = args.config_file
+    output_file = args.output_file
+    num_sims =  args.num_sims
+
+    if not os.path.isfile(config_file):
+        sys.exit("Configuration file path is incorrect")
+
+    # Load openai key
+    load_dotenv()
     openai.api_key = os.environ['OPENAI_KEY']
     
-    # load config
-    with open('.config') as f:    config = json.load(f)
+    # Load config
+    with open(config_file, 'r') as f:    config = json.load(f)
     _system_prompt_str = config['system']
     _otherCar_prompt_str = config['otherCar']
     _myCar_prompt_str = config['myCar']
-    
-    game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str)
-    game.play()
+    _carList = config['carList']
+
+    # Simulate and output
+    simulate_and_output(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList,
+                        output_file, num_sims)
