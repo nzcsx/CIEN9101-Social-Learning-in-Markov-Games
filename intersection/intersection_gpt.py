@@ -188,7 +188,7 @@ class DrivingGame:
         response = openai.chat.completions.create(
             model='gpt-4',
             messages=prompt,
-            temperature=0.0,
+            temperature=0.1,
             max_tokens=10,
         )
         rspns_text = response.choices[0].message.content

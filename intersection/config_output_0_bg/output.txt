@@ -11,13 +11,169 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 
-green car chose Stop
-red car chose Stop
+green car chose Go
+red car chose Go
 
 
 Time Step 3:
 green car: (3, 5), -4
-red car: (5, 2), -4
+red car: (5, 3), -4
+
+green car chose Go
+red car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 4), -6
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 4), -8
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 6:
+green car: (4, 5), -10
+red car: (5, 4), -10
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 7:
+green car: (4, 5), -12
+red car: (5, 4), -12
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 8:
+green car: (4, 5), -14
+red car: (5, 4), -14
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 9:
+green car: (4, 5), -16
+red car: (5, 4), -16
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 10:
+green car: (4, 5), -18
+red car: (5, 4), -18
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 11:
+green car: (4, 5), -20
+red car: (5, 4), -20
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 12:
+green car: (4, 5), -22
+red car: (5, 4), -22
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 13:
+green car: (4, 5), -24
+red car: (5, 4), -24
+
+green car chose Go
+red car chose Go
+
+
+Time Step 14:
+green car: (4, 5), -26
+red car: (5, 5), -26
+
+green car chose Go
+red car chose Go
+
+
+Time Step 15:
+green car: (4, 5), -28
+red car: (5, 6), -28
+
+green car chose Go
+red car chose Go
+
+
+Time Step 16:
+green car: (5, 5), -30
+red car: (5, 7), -30
+
+green car chose Go
+red car chose Go
+
+
+Time Step 17:
+green car: (6, 5), -32
+red car: (5, 8), -32
+
+green car chose Go
+red car chose Go
+
+
+Time Step 18:
+green car: (7, 5), -34
+red car: (5, 9), -34
+
+green car chose Go
+
+
+Time Step 19:
+green car: (8, 5), -36
+
+green car chose Go
+
+
+Time Step 20:
+green car: (9, 5), -38
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 2 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+
+green car chose Go
+red car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+
+green car chose Go
+red car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 3), -4
 
 green car chose Stop
 red car chose Stop
@@ -25,66 +181,144 @@ red car chose Stop
 
 Time Step 4:
 green car: (4, 5), -6
-red car: (5, 2), -6
+red car: (5, 3), -6
+
+green car chose Go
+red car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 4), -8
 
 green car chose Stop
 red car chose Stop
 
 
-Time Step 5:
-green car: (5, 5), -8
-red car: (5, 2), -8
-
-green car chose Go
-red car chose Go
-
-
 Time Step 6:
-green car: (6, 5), -10
-red car: (5, 3), -10
+green car: (4, 5), -10
+red car: (5, 4), -10
 
-green car chose Go
-red car chose Go
+green car chose Stop
+red car chose Stop
 
 
 Time Step 7:
-green car: (7, 5), -12
+green car: (4, 5), -12
 red car: (5, 4), -12
 
-green car chose Go
-red car chose Go
+green car chose Stop
+red car chose Stop
 
 
 Time Step 8:
-green car: (8, 5), -14
-red car: (5, 5), -14
+green car: (4, 5), -14
+red car: (5, 4), -14
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 9:
+green car: (4, 5), -16
+red car: (5, 4), -16
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 10:
+green car: (4, 5), -18
+red car: (5, 4), -18
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 11:
+green car: (4, 5), -20
+red car: (5, 4), -20
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 12:
+green car: (4, 5), -22
+red car: (5, 4), -22
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 13:
+green car: (4, 5), -24
+red car: (5, 4), -24
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 14:
+green car: (4, 5), -26
+red car: (5, 4), -26
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 15:
+green car: (4, 5), -28
+red car: (5, 4), -28
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 16:
+green car: (4, 5), -30
+red car: (5, 4), -30
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 17:
+green car: (4, 5), -32
+red car: (5, 4), -32
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 18:
+green car: (4, 5), -34
+red car: (5, 4), -34
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 19:
+green car: (4, 5), -36
+red car: (5, 4), -36
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 20:
+green car: (5, 5), -38
+red car: (5, 4), -38
 
 green car chose Go
 red car chose Go
 
 
-Time Step 9:
-green car: (9, 5), -16
-red car: (5, 6), -16
+Time Step 21:
+green car: (6, 5), -40
+red car: (5, 5), -40
 
-red car chose Go
-
-
-Time Step 10:
-red car: (5, 7), -18
-
-red car chose Go
-
-
-Time Step 11:
-red car: (5, 8), -20
-
-red car chose Go
-
-
-Time Step 12:
-red car: (5, 9), -22
-
-All cars reached the end of the road. Game over.
+Timed out
 
 
