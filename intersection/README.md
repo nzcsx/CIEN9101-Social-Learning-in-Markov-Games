@@ -36,10 +36,10 @@
     ```
 5. Run the python script. There are 3 positional arguments. 
     ```
-    python intersection_gpt.py .config output 5
+    python intersection_gpt.py ./.config ./output 5
     ```
     a. The first argument is the configuration file path.
 
-    b. The second argument is the output filename without file extension.
+    b. The second argument is the output file path without file extension.
 
     c. The third argument is the number of simulations to run. 
