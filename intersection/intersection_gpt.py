@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import time
 import argparse
 
 import openai
@@ -74,7 +75,7 @@ class DrivingGame:
                 conclusion_txt += "All cars reached the end of the road. Game over.\n"
                 conclusion_csv += "\n"
                 for car in self.car_list:    car.playing = False
-            if time_step > 25:
+            if time_step > 20:
                 conclusion_txt += "Timed out\n"
                 conclusion_csv += "\n"
                 for car in self.car_list:    car.playing = False
@@ -187,7 +188,7 @@ class DrivingGame:
         response = openai.chat.completions.create(
             model='gpt-4',
             messages=prompt,
-            temperature=2.0,
+            temperature=0.0,
             max_tokens=10,
         )
         rspns_text = response.choices[0].message.content
@@ -218,6 +219,8 @@ def simulate_and_output(_system_prompt_str: str, _otherCar_prompt_str: str, _myC
         # Outputs
         accumulated_txt += game.output_txt
         accumulated_csv += game.output_csv
+        print(f"Simulation {i} done.")
+        time.sleep(1)
 
     # Outputs
     with open(output_file + ".txt", 'w') as f:    f.write(accumulated_txt)

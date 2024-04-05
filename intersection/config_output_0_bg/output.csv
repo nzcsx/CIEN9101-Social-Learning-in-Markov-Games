@@ -1,0 +1,15 @@
+===, Sim 1, ===
+Time step, Color, X, Y, Reward, Move, Color, X, Y, Reward, Move, 
+1, green, 1, 5, 0, Go, red, 5, 1, 0, Go, 
+2, green, 2, 5, -2, Go, red, 5, 2, -2, Stop, 
+3, green, 3, 5, -4, Go, red, 5, 2, -4, Stop, 
+4, green, 4, 5, -6, Go, red, 5, 2, -6, Stop, 
+5, green, 5, 5, -8, Go, red, 5, 2, -8, Go, 
+6, green, 6, 5, -10, Go, red, 5, 3, -10, Go, 
+7, green, 7, 5, -12, Go, red, 5, 4, -12, Go, 
+8, green, 8, 5, -14, Go, red, 5, 5, -14, Go, 
+9, green, 9, 5, -16, , red, 5, 6, -16, Go, 
+10, ,,,,, red, 5, 7, -18, Go, 
+11, ,,,,, red, 5, 8, -20, Go, 
+12, ,,,,, red, 5, 9, -22, , 
+
