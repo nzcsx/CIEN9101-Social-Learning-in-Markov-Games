@@ -58,10 +58,10 @@ class DrivingGame:
             # status at the beginning of the time step
             self.output_txt += f"Time Step {time_step}:\n"
             self.output_csv += f"{time_step}, "
-            for my_car in self.car_list:
-                if my_car.playing:
+            for car in self.car_list:
+                if car.playing:
                     # exit game if needed
-                    my_car.playing = (my_car.X != 9) if my_car.color=="green" else (my_car.Y != 9)
+                    car.playing = (car.X != 9) if car.color=="green" else (car.Y != 9)
 
             # check game end
             conclusion_txt = ""
@@ -80,13 +80,13 @@ class DrivingGame:
                 for car in self.car_list:    car.playing = False
 
             # Get (and queue) move update
-            for my_car in self.car_list:
-                if my_car.playing:
-                    if my_car.color != "white":
-                        Move, X_pos, Y_pos = self.get_openai_response(my_car)
+            for car in self.car_list:
+                if car.playing:
+                    if car.color != "white":
+                        Move, X_pos, Y_pos = self.get_openai_response(car)
                     else:
-                        Move, X_pos, Y_pos = ("Go", my_car.X, my_car.Y + 1)
-                    my_car.queue_update(X_pos, Y_pos, Move)
+                        Move, X_pos, Y_pos = ("Go", car.X, car.Y + 1)
+                    car.queue_update(X_pos, Y_pos, Move)
             
             # Output
             for car in self.car_list:
@@ -110,25 +110,25 @@ class DrivingGame:
             
             # Update position and position_count
             self.position_count = defaultdict(int)
-            for my_car in self.car_list:
-                if my_car.playing:
-                    my_car.update_position()
-                    self.position_count[(my_car.X, my_car.Y)] += 1
+            for car in self.car_list:
+                if car.playing:
+                    car.update_position()
+                    self.position_count[(car.X, car.Y)] += 1
             
             # Update reward
-            for my_car in self.car_list:
-                if my_car.playing:
-                    my_car.set_reward_from_move()
-                    if self.check_crash(my_car):
-                        my_car.set_reward_from_crash()
+            for car in self.car_list:
+                if car.playing:
+                    car.set_reward_from_move()
+                    if self.check_crash(car):
+                        car.set_reward_from_crash()
 
             # increment time
             time_step += 1
 
    
     def check_all_cars_not_playing(self):
-        for my_car in self.car_list:
-            if my_car.playing:
+        for car in self.car_list:
+            if car.playing:
                 return False
         return True
 
@@ -145,13 +145,13 @@ class DrivingGame:
 
 
     # get ai repsonse without changing anything variables yet
-    def get_openai_response(self, my_car: Car) -> tuple[str, int, int]:
+    def get_openai_response(self, myCar: Car) -> tuple[str, int, int]:
         # call as green or red
-        # All the other_cars in the list
-        other_car_list = list()
+        # All the otherCars in the list
+        otherCar_list = list()
         for car in self.car_list:
-            if my_car != car:
-                other_car_list.append(car)
+            if myCar != car:
+                otherCar_list.append(car)
 
         # chatgpt prompt
         prompt = []
@@ -166,16 +166,16 @@ class DrivingGame:
         # user prompt
         user_prompt = ""
         
-        for other_car in other_car_list:
-            other_position = f"({other_car.X},{other_car.Y})" if other_car.playing else \
+        for otherCar in otherCar_list:
+            otherPosition = f"({otherCar.X},{otherCar.Y})" if otherCar.playing else \
                             "somewhere outside this grid, no longer relevant"
-            user_prompt += self._otherCar_prompt_str.replace('{otherColor}', other_car.color) \
-                                                    .replace('{otherPosition}', other_position)
+            user_prompt += self._otherCar_prompt_str.replace('{otherColor}', otherCar.color) \
+                                                    .replace('{otherPosition}', otherPosition)
         
-        my_position = f"({my_car.X},{my_car.Y})"
-        user_prompt += self._myCar_prompt_str.replace('{myColor}', my_car.color) \
-                                             .replace('{myPosition}', my_position) \
-                                             .replace('{myReward}',str(my_car.reward))
+        myPosition = f"({myCar.X},{myCar.Y})"
+        user_prompt += self._myCar_prompt_str.replace('{myColor}', myCar.color) \
+                                             .replace('{myPosition}', myPosition) \
+                                             .replace('{myReward}',str(myCar.reward))
         
         user_prompt = {
             'role' : 'user', 
