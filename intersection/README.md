@@ -36,7 +36,7 @@
     ```
 5. Run the python script. There are 3 positional arguments. 
     ```
-    python intersection_gpt.py ./config_output_0_bg/.config ./config_output_0_bg/output 5
+    python intersection_gpt.py ./config_output_0_bg/.config ./config_output_0_bg/output 10
     ```
     a. The first argument is the configuration file path.
 
