@@ -229,7 +229,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='LLM Intersection Simulator')
     parser.add_argument(dest="config_file", type=str, 
-        help="Configuration file with json content")
+        help="Configuration file path")
     parser.add_argument(dest="output_file", type=str, 
         help="Output filename without file extension")
     parser.add_argument(dest="num_sims", type=int, 
