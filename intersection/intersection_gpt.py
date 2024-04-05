@@ -231,7 +231,7 @@ if __name__ == "__main__":
     parser.add_argument(dest="config_file", type=str, 
         help="Configuration file path")
     parser.add_argument(dest="output_file", type=str, 
-        help="Output filename without file extension")
+        help="Output file path without file extension")
     parser.add_argument(dest="num_sims", type=int, 
         help="Number of simulations")
     
