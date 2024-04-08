@@ -51,7 +51,7 @@ class DrivingGame:
         self.position_count = defaultdict(int)
         # Outputs
         self.output_txt = ""
-        self.output_csv = "Time step, " + "".join(["Color, X, Y, Reward, Move, " for _ in _carList]) + "\n"
+        self.output_csv = ""
 
     def play(self):
         time_step = 1
@@ -94,10 +94,13 @@ class DrivingGame:
                 if car.playing:
                     self.output_txt += f"{car.color} car: ({car.X}, {car.Y}), {car.reward}\n"
                     self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, {car.MoveUpdate}, "
-                elif car.MoveUpdate != "Exited":
+                elif car.MoveUpdate != "Ended":
                     self.output_txt += f"{car.color} car: ({car.X}, {car.Y}), {car.reward}\n"
-                    self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, , "
-                    car.MoveUpdate = "Exited"
+                    if self.check_crash(car):
+                        self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, Crashed, "
+                    else:
+                        self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, Exited, "
+                    car.MoveUpdate = "Ended"
                 else:
                     self.output_csv += f",,,,, "
             self.output_txt += "\n"
@@ -205,12 +208,12 @@ def simulate_and_output(_system_prompt_str: str, _otherCar_prompt_str: str, _myC
                           output_file: str, num_sims: int):
     # Accumulated outputs
     accumulated_txt = ""
-    accumulated_csv = ""
+    accumulated_csv = "Sim, Time step, " + "".join(["Color, X, Y, Reward, Move, " for _ in _carList]) + "\n"
 
     for i in range(1, num_sims+1):
         # Outputs
         accumulated_txt += f"=== Sim {i} ===\n"
-        accumulated_csv += f"===, Sim {i}, ===\n"
+        accumulated_csv += f""
 
         # Run game
         game = DrivingGame(_system_prompt_str, _otherCar_prompt_str, _myCar_prompt_str, _carList)
@@ -218,11 +221,16 @@ def simulate_and_output(_system_prompt_str: str, _otherCar_prompt_str: str, _myC
 
         # Outputs
         accumulated_txt += game.output_txt
-        accumulated_csv += game.output_csv
+        for line in game.output_csv.split('\n'):
+            if line:    accumulated_csv += f"{i}, {line}, \n" 
+            else:       accumulated_csv += f"\n"
         print(f"Simulation {i} done.")
         time.sleep(1)
 
     # Outputs
+    dir = os.path.split(output_file)[0]
+    if not os.path.exists(dir):   os.mkdir(dir)
+
     with open(output_file + ".txt", 'w') as f:    f.write(accumulated_txt)
     with open(output_file + ".csv", 'w') as f:    f.write(accumulated_csv)
 
@@ -245,6 +253,12 @@ if __name__ == "__main__":
 
     if not os.path.isfile(config_file):
         sys.exit("Configuration file path is incorrect")
+    if os.path.isfile(output_file + ".txt"):
+        try:       open(output_file + ".txt", 'w')
+        except:    sys.exit("Output file path is not writable")
+    if os.path.isfile(output_file + ".csv"):
+        try:       open(output_file + ".csv", 'w')
+        except:    sys.exit("Output file path is not writable")
 
     # Load openai key
     load_dotenv()
