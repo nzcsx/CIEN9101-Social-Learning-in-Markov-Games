@@ -94,13 +94,13 @@ class DrivingGame:
                 if car.playing:
                     self.output_txt += f"{car.color} car: ({car.X}, {car.Y}), {car.reward}\n"
                     self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, {car.MoveUpdate}, "
-                elif car.MoveUpdate != "Exited":
+                elif car.MoveUpdate != "Ended":
                     self.output_txt += f"{car.color} car: ({car.X}, {car.Y}), {car.reward}\n"
                     if self.check_crash(car):
                         self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, Crashed, "
                     else:
                         self.output_csv += f"{car.color}, {car.X}, {car.Y}, {car.reward}, Exited, "
-                    car.MoveUpdate = "Exited"
+                    car.MoveUpdate = "Ended"
                 else:
                     self.output_csv += f",,,,, "
             self.output_txt += "\n"
@@ -230,7 +230,7 @@ def simulate_and_output(_system_prompt_str: str, _otherCar_prompt_str: str, _myC
     # Outputs
     dir = os.path.split(output_file)[0]
     if not os.path.exists(dir):   os.mkdir(dir)
-    
+
     with open(output_file + ".txt", 'w') as f:    f.write(accumulated_txt)
     with open(output_file + ".csv", 'w') as f:    f.write(accumulated_csv)
 
