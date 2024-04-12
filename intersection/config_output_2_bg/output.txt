@@ -3,9 +3,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -13,9 +15,11 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -23,46 +27,55 @@ Time Step 3:
 green car: (3, 5), -4
 red car: (5, 2), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 4:
-green car: (4, 5), -6
+green car: (3, 5), -6
 red car: (5, 2), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
-green car: (4, 5), -8
-red car: (5, 2), -8
+green car: (3, 5), -8
+red car: (5, 3), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
-green car: (5, 5), -10
-red car: (5, 2), -10
+green car: (4, 5), -10
+red car: (5, 4), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
 white car chose Go
+white car chose Go
 
 
 Time Step 7:
-green car: (6, 5), -12
-red car: (5, 3), -12
+green car: (4, 5), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -70,8 +83,8 @@ white car chose Go
 
 
 Time Step 8:
-green car: (7, 5), -14
-red car: (5, 4), -14
+green car: (4, 5), -14
+red car: (5, 5), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -79,34 +92,44 @@ red car chose Go
 
 
 Time Step 9:
-green car: (8, 5), -16
-red car: (5, 5), -16
+green car: (4, 5), -16
+red car: (5, 6), -16
 
 green car chose Go
 red car chose Go
 
 
 Time Step 10:
-green car: (9, 5), -18
-red car: (5, 6), -18
+green car: (5, 5), -18
+red car: (5, 7), -18
 
+green car chose Go
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 7), -20
+green car: (6, 5), -20
+red car: (5, 8), -20
 
+green car chose Go
 red car chose Go
 
 
 Time Step 12:
-red car: (5, 8), -22
+green car: (7, 5), -22
+red car: (5, 9), -22
 
-red car chose Go
+green car chose Go
 
 
 Time Step 13:
-red car: (5, 9), -24
+green car: (8, 5), -24
+
+green car chose Go
+
+
+Time Step 14:
+green car: (9, 5), -26
 
 All cars reached the end of the road. Game over.
 
@@ -116,9 +139,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -126,56 +151,67 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 3:
 green car: (3, 5), -4
-red car: (5, 2), -4
+red car: (5, 3), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 4:
 green car: (4, 5), -6
-red car: (5, 2), -6
+red car: (5, 3), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
 green car: (4, 5), -8
-red car: (5, 2), -8
+red car: (5, 4), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
-green car: (5, 5), -10
-red car: (5, 2), -10
+green car: (4, 5), -10
+red car: (5, 4), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
 white car chose Go
+white car chose Go
 
 
 Time Step 7:
-green car: (6, 5), -12
-red car: (5, 2), -12
+green car: (4, 5), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -183,8 +219,8 @@ white car chose Go
 
 
 Time Step 8:
-green car: (7, 5), -14
-red car: (5, 3), -14
+green car: (4, 5), -14
+red car: (5, 5), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -192,40 +228,44 @@ red car chose Go
 
 
 Time Step 9:
-green car: (8, 5), -16
-red car: (5, 4), -16
+green car: (4, 5), -16
+red car: (5, 6), -16
 
 green car chose Go
 red car chose Go
 
 
 Time Step 10:
-green car: (9, 5), -18
-red car: (5, 5), -18
+green car: (5, 5), -18
+red car: (5, 7), -18
 
+green car chose Go
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 6), -20
+green car: (6, 5), -20
+red car: (5, 8), -20
 
+green car chose Go
 red car chose Go
 
 
 Time Step 12:
-red car: (5, 7), -22
+green car: (7, 5), -22
+red car: (5, 9), -22
 
-red car chose Go
+green car chose Go
 
 
 Time Step 13:
-red car: (5, 8), -24
+green car: (8, 5), -24
 
-red car chose Go
+green car chose Go
 
 
 Time Step 14:
-red car: (5, 9), -26
+green car: (9, 5), -26
 
 All cars reached the end of the road. Game over.
 
@@ -235,9 +275,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -245,56 +287,67 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 3:
 green car: (3, 5), -4
-red car: (5, 2), -4
+red car: (5, 3), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 4:
 green car: (4, 5), -6
-red car: (5, 2), -6
+red car: (5, 3), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
 green car: (4, 5), -8
-red car: (5, 2), -8
+red car: (5, 3), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
-green car: (5, 5), -10
-red car: (5, 2), -10
+green car: (4, 5), -10
+red car: (5, 4), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
 white car chose Go
+white car chose Go
 
 
 Time Step 7:
-green car: (6, 5), -12
-red car: (5, 3), -12
+green car: (4, 5), -12
+red car: (5, 5), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -302,49 +355,39 @@ white car chose Go
 
 
 Time Step 8:
-green car: (7, 5), -14
-red car: (5, 4), -14
+green car: (5, 5), -14
+red car: (5, 6), -14
 white car: (5, 9), -14
 
-green car chose Stop
-red car chose Stop
+green car chose Go
+red car chose Go
 
 
 Time Step 9:
-green car: (8, 5), -16
-red car: (5, 4), -16
+green car: (6, 5), -16
+red car: (5, 7), -16
 
 green car chose Go
 red car chose Go
 
 
 Time Step 10:
-green car: (9, 5), -18
-red car: (5, 5), -18
+green car: (7, 5), -18
+red car: (5, 8), -18
 
+green car chose Go
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 6), -20
+green car: (8, 5), -20
+red car: (5, 9), -20
 
-red car chose Go
+green car chose Go
 
 
 Time Step 12:
-red car: (5, 7), -22
-
-red car chose Go
-
-
-Time Step 13:
-red car: (5, 8), -24
-
-red car chose Go
-
-
-Time Step 14:
-red car: (5, 9), -26
+green car: (9, 5), -22
 
 All cars reached the end of the road. Game over.
 
@@ -354,9 +397,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -364,9 +409,11 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -374,9 +421,11 @@ Time Step 3:
 green car: (3, 5), -4
 red car: (5, 2), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -384,36 +433,43 @@ Time Step 4:
 green car: (4, 5), -6
 red car: (5, 2), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
 green car: (4, 5), -8
-red car: (5, 2), -8
+red car: (5, 3), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
 green car: (5, 5), -10
-red car: (5, 2), -10
+red car: (5, 4), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 7:
 green car: (6, 5), -12
-red car: (5, 2), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -422,7 +478,7 @@ white car chose Go
 
 Time Step 8:
 green car: (7, 5), -14
-red car: (5, 3), -14
+red car: (5, 5), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -431,7 +487,7 @@ red car chose Go
 
 Time Step 9:
 green car: (8, 5), -16
-red car: (5, 4), -16
+red car: (5, 6), -16
 
 green car chose Go
 red car chose Go
@@ -439,31 +495,19 @@ red car chose Go
 
 Time Step 10:
 green car: (9, 5), -18
-red car: (5, 5), -18
+red car: (5, 7), -18
 
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 6), -20
+red car: (5, 8), -20
 
 red car chose Go
 
 
 Time Step 12:
-red car: (5, 7), -22
-
-red car chose Go
-
-
-Time Step 13:
-red car: (5, 8), -24
-
-red car chose Go
-
-
-Time Step 14:
-red car: (5, 9), -26
+red car: (5, 9), -22
 
 All cars reached the end of the road. Game over.
 
@@ -473,9 +517,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -483,9 +529,11 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -493,46 +541,55 @@ Time Step 3:
 green car: (3, 5), -4
 red car: (5, 2), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 4:
-green car: (4, 5), -6
+green car: (3, 5), -6
 red car: (5, 2), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
-green car: (4, 5), -8
+green car: (3, 5), -8
 red car: (5, 2), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
-green car: (5, 5), -10
-red car: (5, 2), -10
+green car: (4, 5), -10
+red car: (5, 3), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
 white car chose Go
+white car chose Go
 
 
 Time Step 7:
-green car: (6, 5), -12
-red car: (5, 2), -12
+green car: (4, 5), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -540,8 +597,8 @@ white car chose Go
 
 
 Time Step 8:
-green car: (7, 5), -14
-red car: (5, 2), -14
+green car: (5, 5), -14
+red car: (5, 4), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -549,46 +606,38 @@ red car chose Go
 
 
 Time Step 9:
-green car: (8, 5), -16
-red car: (5, 3), -16
+green car: (6, 5), -16
+red car: (5, 5), -16
 
 green car chose Go
 red car chose Go
 
 
 Time Step 10:
-green car: (9, 5), -18
-red car: (5, 4), -18
+green car: (7, 5), -18
+red car: (5, 6), -18
 
+green car chose Go
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 5), -20
+green car: (8, 5), -20
+red car: (5, 7), -20
 
+green car chose Go
 red car chose Go
 
 
 Time Step 12:
-red car: (5, 6), -22
+green car: (9, 5), -22
+red car: (5, 8), -22
 
 red car chose Go
 
 
 Time Step 13:
-red car: (5, 7), -24
-
-red car chose Go
-
-
-Time Step 14:
-red car: (5, 8), -26
-
-red car chose Go
-
-
-Time Step 15:
-red car: (5, 9), -28
+red car: (5, 9), -24
 
 All cars reached the end of the road. Game over.
 
@@ -598,9 +647,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -608,56 +659,67 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 3:
 green car: (3, 5), -4
-red car: (5, 2), -4
+red car: (5, 3), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 4:
 green car: (4, 5), -6
-red car: (5, 2), -6
+red car: (5, 3), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
-green car: (5, 5), -8
-red car: (5, 2), -8
+green car: (4, 5), -8
+red car: (5, 3), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
-green car: (6, 5), -10
-red car: (5, 2), -10
+green car: (4, 5), -10
+red car: (5, 4), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
 white car chose Go
+white car chose Go
 
 
 Time Step 7:
-green car: (7, 5), -12
-red car: (5, 2), -12
+green car: (4, 5), -12
+red car: (5, 5), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -665,8 +727,8 @@ white car chose Go
 
 
 Time Step 8:
-green car: (8, 5), -14
-red car: (5, 3), -14
+green car: (4, 5), -14
+red car: (5, 6), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -674,38 +736,36 @@ red car chose Go
 
 
 Time Step 9:
-green car: (9, 5), -16
-red car: (5, 4), -16
+green car: (5, 5), -16
+red car: (5, 7), -16
 
+green car chose Go
 red car chose Go
 
 
 Time Step 10:
-red car: (5, 5), -18
+green car: (6, 5), -18
+red car: (5, 8), -18
 
+green car chose Go
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 6), -20
+green car: (7, 5), -20
+red car: (5, 9), -20
 
-red car chose Go
+green car chose Go
 
 
 Time Step 12:
-red car: (5, 7), -22
+green car: (8, 5), -22
 
-red car chose Go
+green car chose Go
 
 
 Time Step 13:
-red car: (5, 8), -24
-
-red car chose Go
-
-
-Time Step 14:
-red car: (5, 9), -26
+green car: (9, 5), -24
 
 All cars reached the end of the road. Game over.
 
@@ -715,9 +775,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -725,9 +787,11 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -735,46 +799,55 @@ Time Step 3:
 green car: (3, 5), -4
 red car: (5, 2), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 4:
 green car: (4, 5), -6
-red car: (5, 2), -6
+red car: (5, 3), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
-green car: (5, 5), -8
-red car: (5, 2), -8
+green car: (4, 5), -8
+red car: (5, 4), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
-green car: (6, 5), -10
-red car: (5, 3), -10
+green car: (4, 5), -10
+red car: (5, 4), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
 white car chose Go
+white car chose Go
 
 
 Time Step 7:
-green car: (7, 5), -12
-red car: (5, 3), -12
+green car: (4, 5), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -782,8 +855,8 @@ white car chose Go
 
 
 Time Step 8:
-green car: (8, 5), -14
-red car: (5, 4), -14
+green car: (4, 5), -14
+red car: (5, 5), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -791,32 +864,44 @@ red car chose Go
 
 
 Time Step 9:
-green car: (9, 5), -16
-red car: (5, 5), -16
+green car: (4, 5), -16
+red car: (5, 6), -16
 
+green car chose Go
 red car chose Go
 
 
 Time Step 10:
-red car: (5, 6), -18
+green car: (5, 5), -18
+red car: (5, 7), -18
 
+green car chose Go
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 7), -20
+green car: (6, 5), -20
+red car: (5, 8), -20
 
+green car chose Go
 red car chose Go
 
 
 Time Step 12:
-red car: (5, 8), -22
+green car: (7, 5), -22
+red car: (5, 9), -22
 
-red car chose Go
+green car chose Go
 
 
 Time Step 13:
-red car: (5, 9), -24
+green car: (8, 5), -24
+
+green car chose Go
+
+
+Time Step 14:
+green car: (9, 5), -26
 
 All cars reached the end of the road. Game over.
 
@@ -826,9 +911,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -836,9 +923,11 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -846,9 +935,11 @@ Time Step 3:
 green car: (3, 5), -4
 red car: (5, 2), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -856,36 +947,43 @@ Time Step 4:
 green car: (4, 5), -6
 red car: (5, 2), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
-green car: (5, 5), -8
+green car: (4, 5), -8
 red car: (5, 2), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
-green car: (6, 5), -10
+green car: (5, 5), -10
 red car: (5, 3), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
 white car chose Go
+white car chose Go
 
 
 Time Step 7:
-green car: (7, 5), -12
-red car: (5, 3), -12
+green car: (6, 5), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -893,8 +991,8 @@ white car chose Go
 
 
 Time Step 8:
-green car: (8, 5), -14
-red car: (5, 4), -14
+green car: (7, 5), -14
+red car: (5, 5), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -902,32 +1000,28 @@ red car chose Go
 
 
 Time Step 9:
-green car: (9, 5), -16
-red car: (5, 5), -16
+green car: (8, 5), -16
+red car: (5, 6), -16
 
+green car chose Go
 red car chose Go
 
 
 Time Step 10:
-red car: (5, 6), -18
+green car: (9, 5), -18
+red car: (5, 7), -18
 
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 7), -20
+red car: (5, 8), -20
 
 red car chose Go
 
 
 Time Step 12:
-red car: (5, 8), -22
-
-red car chose Go
-
-
-Time Step 13:
-red car: (5, 9), -24
+red car: (5, 9), -22
 
 All cars reached the end of the road. Game over.
 
@@ -937,9 +1031,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -947,9 +1043,11 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -957,9 +1055,11 @@ Time Step 3:
 green car: (3, 5), -4
 red car: (5, 2), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -967,9 +1067,11 @@ Time Step 4:
 green car: (4, 5), -6
 red car: (5, 2), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -977,26 +1079,31 @@ Time Step 5:
 green car: (4, 5), -8
 red car: (5, 2), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
 green car: (5, 5), -10
-red car: (5, 2), -10
+red car: (5, 3), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 7:
 green car: (6, 5), -12
-red car: (5, 2), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -1005,7 +1112,7 @@ white car chose Go
 
 Time Step 8:
 green car: (7, 5), -14
-red car: (5, 3), -14
+red car: (5, 5), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -1014,7 +1121,7 @@ red car chose Go
 
 Time Step 9:
 green car: (8, 5), -16
-red car: (5, 4), -16
+red car: (5, 6), -16
 
 green car chose Go
 red car chose Go
@@ -1022,31 +1129,19 @@ red car chose Go
 
 Time Step 10:
 green car: (9, 5), -18
-red car: (5, 5), -18
+red car: (5, 7), -18
 
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 6), -20
+red car: (5, 8), -20
 
 red car chose Go
 
 
 Time Step 12:
-red car: (5, 7), -22
-
-red car chose Go
-
-
-Time Step 13:
-red car: (5, 8), -24
-
-red car chose Go
-
-
-Time Step 14:
-red car: (5, 9), -26
+red car: (5, 9), -22
 
 All cars reached the end of the road. Game over.
 
@@ -1056,9 +1151,11 @@ Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
 white car: (5, 2), 0
+white car: (5, 3), 0
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
@@ -1066,56 +1163,67 @@ Time Step 2:
 green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
+white car: (5, 4), -2
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 3:
 green car: (3, 5), -4
-red car: (5, 2), -4
+red car: (5, 3), -4
 white car: (5, 4), -4
+white car: (5, 5), -4
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 4:
 green car: (4, 5), -6
-red car: (5, 2), -6
+red car: (5, 3), -6
 white car: (5, 5), -6
+white car: (5, 6), -6
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 5:
 green car: (4, 5), -8
-red car: (5, 2), -8
+red car: (5, 4), -8
 white car: (5, 6), -8
+white car: (5, 7), -8
 
 green car chose Go
 red car chose Go
+white car chose Go
 white car chose Go
 
 
 Time Step 6:
-green car: (5, 5), -10
-red car: (5, 2), -10
+green car: (4, 5), -10
+red car: (5, 4), -10
 white car: (5, 7), -10
+white car: (5, 8), -10
 
 green car chose Go
 red car chose Go
 white car chose Go
+white car chose Go
 
 
 Time Step 7:
-green car: (6, 5), -12
-red car: (5, 3), -12
+green car: (4, 5), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
+white car: (5, 9), -12
 
 green car chose Go
 red car chose Go
@@ -1123,8 +1231,8 @@ white car chose Go
 
 
 Time Step 8:
-green car: (7, 5), -14
-red car: (5, 3), -14
+green car: (4, 5), -14
+red car: (5, 5), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -1132,40 +1240,44 @@ red car chose Go
 
 
 Time Step 9:
-green car: (8, 5), -16
-red car: (5, 4), -16
+green car: (4, 5), -16
+red car: (5, 6), -16
 
 green car chose Go
 red car chose Go
 
 
 Time Step 10:
-green car: (9, 5), -18
-red car: (5, 5), -18
+green car: (5, 5), -18
+red car: (5, 7), -18
 
+green car chose Go
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 6), -20
+green car: (6, 5), -20
+red car: (5, 8), -20
 
+green car chose Go
 red car chose Go
 
 
 Time Step 12:
-red car: (5, 7), -22
+green car: (7, 5), -22
+red car: (5, 9), -22
 
-red car chose Go
+green car chose Go
 
 
 Time Step 13:
-red car: (5, 8), -24
+green car: (8, 5), -24
 
-red car chose Go
+green car chose Go
 
 
 Time Step 14:
-red car: (5, 9), -26
+green car: (9, 5), -26
 
 All cars reached the end of the road. Game over.
 
