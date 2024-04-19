@@ -15,7 +15,7 @@ white car chose Go
 
 Time Step 2:
 green car: (2, 5), -2
-red car: (5, 1), -2
+red car: (5, 2), -2
 white car: (5, 3), -2
 white car: (5, 4), -2
 white car: (4, 6), -2
@@ -29,7 +29,7 @@ white car chose Go
 
 Time Step 3:
 green car: (3, 5), -4
-red car: (5, 1), -4
+red car: (5, 2), -4
 white car: (5, 4), -4
 white car: (5, 5), -4
 white car: (4, 7), -4
@@ -197,7 +197,7 @@ white car chose Go
 
 Time Step 6:
 green car: (6, 5), -10
-red car: (5, 4), -10
+red car: (5, 3), -10
 white car: (5, 7), -10
 white car: (5, 8), -10
 
@@ -253,133 +253,6 @@ All cars reached the end of the road. Game over.
 
 
 === Sim 3 ===
-Time Step 1:
-green car: (1, 5), 0
-red car: (5, 1), 0
-white car: (5, 2), 0
-white car: (5, 3), 0
-white car: (4, 5), 0
-
-green car chose Go
-red car chose Go
-white car chose Go
-white car chose Go
-white car chose Go
-
-
-Time Step 2:
-green car: (2, 5), -2
-red car: (5, 2), -2
-white car: (5, 3), -2
-white car: (5, 4), -2
-white car: (4, 6), -2
-
-green car chose Go
-red car chose Go
-white car chose Go
-white car chose Go
-white car chose Go
-
-
-Time Step 3:
-green car: (3, 5), -4
-red car: (5, 2), -4
-white car: (5, 4), -4
-white car: (5, 5), -4
-white car: (4, 7), -4
-
-green car chose Go
-red car chose Go
-white car chose Go
-white car chose Go
-white car chose Go
-
-
-Time Step 4:
-green car: (4, 5), -6
-red car: (5, 2), -6
-white car: (5, 5), -6
-white car: (5, 6), -6
-white car: (4, 8), -6
-
-green car chose Go
-red car chose Go
-white car chose Go
-white car chose Go
-white car chose Go
-
-
-Time Step 5:
-green car: (5, 5), -8
-red car: (5, 3), -8
-white car: (5, 6), -8
-white car: (5, 7), -8
-white car: (4, 9), -8
-
-green car chose Go
-red car chose Go
-white car chose Go
-white car chose Go
-
-
-Time Step 6:
-green car: (6, 5), -10
-red car: (5, 4), -10
-white car: (5, 7), -10
-white car: (5, 8), -10
-
-green car chose Go
-red car chose Go
-white car chose Go
-white car chose Go
-
-
-Time Step 7:
-green car: (7, 5), -12
-red car: (5, 4), -12
-white car: (5, 8), -12
-white car: (5, 9), -12
-
-green car chose Go
-red car chose Go
-white car chose Go
-
-
-Time Step 8:
-green car: (8, 5), -14
-red car: (5, 5), -14
-white car: (5, 9), -14
-
-green car chose Go
-red car chose Go
-
-
-Time Step 9:
-green car: (9, 5), -16
-red car: (5, 6), -16
-
-red car chose Go
-
-
-Time Step 10:
-red car: (5, 7), -18
-
-red car chose Go
-
-
-Time Step 11:
-red car: (5, 8), -20
-
-red car chose Go
-
-
-Time Step 12:
-red car: (5, 9), -22
-
-All cars reached the end of the road. Game over.
-
-
-=== Sim 4 ===
 Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
@@ -502,7 +375,7 @@ red car: (5, 9), -20
 All cars reached the end of the road. Game over.
 
 
-=== Sim 5 ===
+=== Sim 4 ===
 Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
@@ -574,7 +447,7 @@ white car chose Go
 
 Time Step 6:
 green car: (6, 5), -10
-red car: (5, 4), -10
+red car: (5, 3), -10
 white car: (5, 7), -10
 white car: (5, 8), -10
 
@@ -629,6 +502,129 @@ red car: (5, 9), -22
 All cars reached the end of the road. Game over.
 
 
+=== Sim 5 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (3, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (5, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (6, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (7, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (8, 5), -16
+red car: (5, 7), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (9, 5), -18
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
 === Sim 6 ===
 Time Step 1:
 green car: (1, 5), 0
@@ -646,7 +642,7 @@ white car chose Go
 
 Time Step 2:
 green car: (2, 5), -2
-red car: (5, 1), -2
+red car: (5, 2), -2
 white car: (5, 3), -2
 white car: (5, 4), -2
 white car: (4, 6), -2
@@ -900,6 +896,139 @@ white car chose Go
 
 Time Step 2:
 green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 1), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 2), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 3), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 5), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 6), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 7), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 8), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 9), -24
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 9 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
 red car: (5, 2), -2
 white car: (5, 3), -2
 white car: (5, 4), -2
@@ -928,7 +1057,7 @@ white car chose Go
 
 Time Step 4:
 green car: (4, 5), -6
-red car: (5, 3), -6
+red car: (5, 2), -6
 white car: (5, 5), -6
 white car: (5, 6), -6
 white car: (4, 8), -6
@@ -941,8 +1070,8 @@ white car chose Go
 
 
 Time Step 5:
-green car: (4, 5), -8
-red car: (5, 4), -8
+green car: (5, 5), -8
+red car: (5, 3), -8
 white car: (5, 6), -8
 white car: (5, 7), -8
 white car: (4, 9), -8
@@ -954,8 +1083,8 @@ white car chose Go
 
 
 Time Step 6:
-green car: (5, 5), -10
-red car: (5, 4), -10
+green car: (6, 5), -10
+red car: (5, 3), -10
 white car: (5, 7), -10
 white car: (5, 8), -10
 
@@ -966,8 +1095,8 @@ white car chose Go
 
 
 Time Step 7:
-green car: (6, 5), -12
-red car: (5, 5), -12
+green car: (7, 5), -12
+red car: (5, 4), -12
 white car: (5, 8), -12
 white car: (5, 9), -12
 
@@ -977,8 +1106,8 @@ white car chose Go
 
 
 Time Step 8:
-green car: (7, 5), -14
-red car: (5, 6), -14
+green car: (8, 5), -14
+red car: (5, 5), -14
 white car: (5, 9), -14
 
 green car chose Go
@@ -986,27 +1115,31 @@ red car chose Go
 
 
 Time Step 9:
-green car: (8, 5), -16
-red car: (5, 7), -16
+green car: (9, 5), -16
+red car: (5, 6), -16
 
-green car chose Go
 red car chose Go
 
 
 Time Step 10:
-green car: (9, 5), -18
-red car: (5, 8), -18
+red car: (5, 7), -18
 
 red car chose Go
 
 
 Time Step 11:
-red car: (5, 9), -20
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
 
 All cars reached the end of the road. Game over.
 
 
-=== Sim 9 ===
+=== Sim 10 ===
 Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
@@ -1133,7 +1266,1388 @@ red car: (5, 9), -22
 All cars reached the end of the road. Game over.
 
 
-=== Sim 10 ===
+=== Sim 11 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 1), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 2), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 3), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 5), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 6), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 7), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 8), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 9), -24
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 12 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (5, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (6, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (7, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (8, 5), -16
+red car: (5, 7), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (9, 5), -18
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 13 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 5), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 6), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 7), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 8), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 9), -18
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 14 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 15 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 7), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 16 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 5), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 6), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 7), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 8), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 9), -18
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 17 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 18 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 1), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 2), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 19 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 1), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 2), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 20 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (2, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (3, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (4, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (5, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (6, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (6, 5), -16
+red car: (5, 6), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (7, 5), -18
+red car: (5, 7), -18
+
+green car chose Go
+red car chose Go
+
+
+Time Step 11:
+green car: (8, 5), -20
+red car: (5, 8), -20
+
+green car chose Go
+red car chose Go
+
+
+Time Step 12:
+green car: (9, 5), -22
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 21 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 1), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 2), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 3), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 5), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 6), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 7), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 8), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 9), -24
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 22 ===
 Time Step 1:
 green car: (1, 5), 0
 red car: (5, 1), 0
@@ -1243,6 +2757,3562 @@ red car chose Go
 
 
 Time Step 10:
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 23 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 24 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 5), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 6), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 7), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 8), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 9), -18
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 25 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 26 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (6, 5), -12
+red car: (5, 3), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (7, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Stop
+red car chose Stop
+
+
+Time Step 9:
+green car: (8, 5), -16
+red car: (5, 4), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (9, 5), -18
+red car: (5, 5), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 6), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 7), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 8), -24
+
+red car chose Go
+
+
+Time Step 14:
+red car: (5, 9), -26
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 27 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 28 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 29 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 5), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 6), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 7), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 8), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 9), -18
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 30 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 7), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 31 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 32 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (5, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (6, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (7, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (8, 5), -16
+red car: (5, 5), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (9, 5), -18
+red car: (5, 6), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 7), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 8), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 9), -24
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 33 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 34 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 7), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 35 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 36 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 37 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 38 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (6, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (7, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (8, 5), -16
+red car: (5, 5), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (9, 5), -18
+red car: (5, 6), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 7), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 8), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 9), -24
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 39 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (3, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (4, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (5, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (6, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (7, 5), -16
+red car: (5, 6), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (8, 5), -18
+red car: (5, 7), -18
+
+green car chose Go
+red car chose Go
+
+
+Time Step 11:
+green car: (9, 5), -20
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 40 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (3, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (5, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (6, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (7, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (8, 5), -16
+red car: (5, 6), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (9, 5), -18
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 41 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 7), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 42 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 43 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 7), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 44 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 45 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 4), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 5), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 6), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 7), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 8), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 9), -22
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 46 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 3), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 5), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 6), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 7), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 8), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 9), -24
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 47 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 7), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 8), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 9), -20
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 48 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 2), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 3), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (4, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (5, 5), -12
+red car: (5, 3), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (6, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (7, 5), -16
+red car: (5, 5), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (8, 5), -18
+red car: (5, 6), -18
+
+green car chose Go
+red car chose Go
+
+
+Time Step 11:
+green car: (9, 5), -20
+red car: (5, 7), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 8), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 9), -24
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 49 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 1), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 1), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 1), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (5, 5), -8
+red car: (5, 2), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (6, 5), -10
+red car: (5, 3), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (7, 5), -12
+red car: (5, 3), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (8, 5), -14
+red car: (5, 4), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (9, 5), -16
+red car: (5, 5), -16
+
+red car chose Go
+
+
+Time Step 10:
+red car: (5, 6), -18
+
+red car chose Go
+
+
+Time Step 11:
+red car: (5, 7), -20
+
+red car chose Go
+
+
+Time Step 12:
+red car: (5, 8), -22
+
+red car chose Go
+
+
+Time Step 13:
+red car: (5, 9), -24
+
+All cars reached the end of the road. Game over.
+
+
+=== Sim 50 ===
+Time Step 1:
+green car: (1, 5), 0
+red car: (5, 1), 0
+white car: (5, 2), 0
+white car: (5, 3), 0
+white car: (4, 5), 0
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 2:
+green car: (2, 5), -2
+red car: (5, 2), -2
+white car: (5, 3), -2
+white car: (5, 4), -2
+white car: (4, 6), -2
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 3:
+green car: (3, 5), -4
+red car: (5, 2), -4
+white car: (5, 4), -4
+white car: (5, 5), -4
+white car: (4, 7), -4
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 4:
+green car: (4, 5), -6
+red car: (5, 3), -6
+white car: (5, 5), -6
+white car: (5, 6), -6
+white car: (4, 8), -6
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 5:
+green car: (4, 5), -8
+red car: (5, 4), -8
+white car: (5, 6), -8
+white car: (5, 7), -8
+white car: (4, 9), -8
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 6:
+green car: (5, 5), -10
+red car: (5, 4), -10
+white car: (5, 7), -10
+white car: (5, 8), -10
+
+green car chose Go
+red car chose Go
+white car chose Go
+white car chose Go
+
+
+Time Step 7:
+green car: (6, 5), -12
+red car: (5, 5), -12
+white car: (5, 8), -12
+white car: (5, 9), -12
+
+green car chose Go
+red car chose Go
+white car chose Go
+
+
+Time Step 8:
+green car: (7, 5), -14
+red car: (5, 6), -14
+white car: (5, 9), -14
+
+green car chose Go
+red car chose Go
+
+
+Time Step 9:
+green car: (8, 5), -16
+red car: (5, 7), -16
+
+green car chose Go
+red car chose Go
+
+
+Time Step 10:
+green car: (9, 5), -18
 red car: (5, 8), -18
 
 red car chose Go

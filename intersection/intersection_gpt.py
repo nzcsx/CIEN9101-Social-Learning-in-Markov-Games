@@ -40,7 +40,7 @@ class Car:
 class DrivingGame:
     def __init__(self, _system_prompt_str: str, _otherCar_prompt_str: str, _myCar_prompt_str: str, _carList: list[dict[str,str]]):
         # Car list
-        self.car_list = [Car(int(_carData["X"]), \
+        self.car_list = [Car(int(_carData["X"]), \  
                              int(_carData["Y"]), \
                              str(_carData["color"])) for _carData in _carList]
         # Prompt templates
