@@ -26,7 +26,7 @@ class Car:
     
     def set_reward_from_move(self):
         if self.MoveUpdate == "Lane":
-            self.reward -= 5
+            self.reward -= 4
         elif self.MoveUpdate == "Go":
             self.reward -= 2
         elif self.MoveUpdate == "Stop":
@@ -221,11 +221,9 @@ class DrivingGame:
         response = openai.chat.completions.create(
             model='gpt-4',
             messages=prompt,
-            temperature=0,
-            max_tokens=10,
-            top_p=1,
-            frequency_penalty=0.0,
-            presence_penalty=0.0
+            temperature=0.1,
+            max_tokens=10
+          
         )
         rspns_text = response.choices[0].message.content
 
